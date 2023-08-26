@@ -58,6 +58,14 @@ slfj;sakjf;kj;aj;fkjd;kdsjf;aj;a;j;lajf;lkj
 ;dfjkjsda;fk;aka;j;a;a;;;a;kdf;sdkf;a;jaf
 ```
 
+### Review Excercises
+```
+1. Print a string that uses double quotation marks inside the string
+2. Print a string that uses an apostrophe inside the string
+3. Print a string that spans multiple line with whitespace preserved
+4. Print a string that is codded on multiple lines but displays on a single line.
+```
+
 ## 2. Concatenation, Indexing and Slicing
 
 ### String Concatenation
@@ -149,6 +157,16 @@ TypeError: 'str' object does not support item assignment
 >>> word = "f" + word[1:]
 >>> word
 'foal'
+```
+
+### Review Exercises
+```
+1. Create a string and print its length using the len() function.
+2. Create two string, concatenate them, and print the result.
+3. Create two strind variables, then print one of them after the other (with a space added in between) using a comma in your print statement.
+4. Repeat exercise 3, but instead of using commas in print(), use concatenation to add a space between the two strings.
+5. Print the string "zing" by using slice notation on the string "bazinga" to specify the correct range of characters.
+
 ```
 
 ## 3. Manipulate Strings With Methods
