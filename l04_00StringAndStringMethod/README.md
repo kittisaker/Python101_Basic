@@ -76,6 +76,13 @@ slfj;sakjf;kj;aj;fkjd;kdsjf;aj;a;j;lajf;lkj
 
 ## 2. Concatenation, Indexing and Slicing
 
+```
+In this section, you'll learn about three basic string operations:
+1. Concatenation, which joins two strings together
+2. Indexing, which gets a single character from a string
+3. Slicing, which gets several characters from a string at once
+```
+
 ### String Concatenation
 ```
 >>> string1 = "abc"
@@ -179,6 +186,13 @@ TypeError: 'str' object does not support item assignment
 
 ## 3. Manipulate Strings With Methods
 
+```
+In this section, you will learn how to:
+- Convert a string to upper or lower case
+- Remove white space from string
+- Determine if a string begins and ends with certain characters
+```
+
 ### Converting String Case
 
 ```
@@ -238,6 +252,23 @@ False
 >>> name. // scroll through with the arrow keys.
 ```
 
+### Review Exercises
+```
+1. Write a script that converts the following strings to lowercase: "Animals", "Badger", "Honey Bee", "Honeybadger". Print each lowercase string on a separate line. Srting on a separate line.
+2. Repeat Exercise 1, but convert each string to uppercase instead of lowercase.
+3. Write a script that removes whitespace from the following strings. Print out the strings with the whitespace removed.
+  string1 = " Filet Mignon"
+  string2 = "Brisket "
+  string3 = " Cheeseburger "
+4. Write a script that prints out the result of .startswith("be") on each of the following strings:
+  String1 = "Becomes"
+  string2 = "becomes"
+  string3 = "BEAR"
+  string4 = " bEautiful"
+  string4 = " beautiful"
+5. Using the same four strings from Exercise 4, write a script that uses string methods to alter each string so that .startswith("be") returns True for all of them.
+```
+
 ## 4. Interact With User Input
 
 ```
@@ -259,6 +290,14 @@ What should I shout? Noodle.
 Well, if you insist... NOODLE.
 ```
 
+### Exercises
+```
+1. Write a script that takes input from the user and displays that input back.
+2. Write a script that takes input from the user and displays the input in lowercase.
+3. Write a script that takes input from the user and displays the number of characters inputted.
+
+```
+
 ## 5. Challenge : Pick Adart Your User's Input
 
 ```
@@ -268,11 +307,8 @@ of the user’s input, convert that letter to upper-case, and display it back.
 ```
 
 ```
-response = input("Tell me your password : ")
-
-response = response[0].upper() + response[1:]
-
-print("The firstt letter you entered was : ", response)
+For example, if the user input is "no" then the program should respond like this:
+The first letter you entered was: N
 ```
 
 ## 6. Working With String and Numbers
@@ -337,6 +373,17 @@ Enter a number to be doubled : 5.0
 "<class 'float'>"
 ```
 
+### Exercises
+```
+1. Create a string containing an integer, then convert that string into an actual integer object using int() . Test that your new object is a number by multiplying it by another number and displaying the result.
+2. Repeat the previous exercise, but use a floating-point number and float() .
+3. Create a string object and an integer object, then display them side- by-side with a single print statement by using the str() function.
+4. Write a script that gets two numbers from the user using the input() function twice, multiplies the numbers together, and displays the result. If the user enters 2 and 4 , your program should
+print the following text:
+  The product of 2 and 4 is 8.0.
+```
+
+
 ## 7. Streamline Your Print Statements
 
 ```
@@ -376,7 +423,14 @@ arms = 3
 
 print("{} has {} heads and {} arms" .format(name, heads, arms))
 ```
+### Exercises
 
+```
+1. Create a float object named weight with the value 0.2, and create a string object named animal with the value " newt" . Then use these objects to print the following string using only string concatenation:
+0.2 kg is the weight of the newt.
+2. Display the same string by using the .format() method and empty {} place-holders.
+3. Display the same string using an f-string.
+```
 ## 8. Find a String in a String
 
 ```

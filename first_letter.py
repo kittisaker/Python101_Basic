@@ -1,2 +1,4 @@
-my_string = "bazinga"
-print(my_string[2 : 6])
+weight = 0.2
+animal = " newt"
+
+print("{} kg is the weight of the{}" .format(weight, animal))

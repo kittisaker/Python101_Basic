@@ -2,6 +2,13 @@
 
 ## 1. Integer and Floating-Point Numbers
 
+```
+In this chapter, you will learn how to:
+- Work with Python's three built-in nujber types: integer, floating-point and complex numbers
+- Round numbers to a given number of decimal places
+- Format and display numbers in strings
+```
+
 ### Integer
 
 ```
