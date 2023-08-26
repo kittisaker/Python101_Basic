@@ -1,5 +1,13 @@
 # String and String Methods
 
+```
+In this chapter, you will learn how to:
+- Manipulate string with string methods
+- Work with user input
+- Deal with strings of numbers
+- Format strings for printing
+```
+
 ## 1. What is a String?
 
 ### The String Data Type

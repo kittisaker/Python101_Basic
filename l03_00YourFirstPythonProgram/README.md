@@ -1,13 +1,5 @@
 # Your First Python Program
 
-```
-In this chapter, you will learn how to:
-- Manipulate string with string methods
-- Work with user input
-- Deal with strings of numbers
-- Format strings for printing
-```
-
 ## Write a python script
 
 ```
