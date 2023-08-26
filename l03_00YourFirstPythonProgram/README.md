@@ -1,7 +1,5 @@
 # Your First Python Program
 
-## Write a python script
-
 ```
 In this chapter, you will learn how to:
 - Manipulate string with string methods
@@ -9,6 +7,8 @@ In this chapter, you will learn how to:
 - Deal with strings of numbers
 - Format strings for printing
 ```
+
+## Write a python script
 
 ```
 >>> print("Hello, World")
