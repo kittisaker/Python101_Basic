@@ -456,6 +456,16 @@ print("{} has {} heads and {} arms" .format(name, heads, arms))
 'solo dev'
 ```
 
+### Exercises
+
+```
+1. In one line of code, display the result of trying to .find() the sub- string "a" in the string "AAA" . The result should be -1 .
+2. Create the variable n = 2.0 . Then use input() to get a string from the user. Finally, display the index of the first occurrence of n in the input string using .find() .
+The output should look something like this:
+  Enter a string: version 2.0
+3. Write and test a script that accepts user input using the input() function and displays the result of trying to .find() a particular letter in that input.
+```
+
 ## 9. Challenge : Turn Your User Into a L33t H4x0r
 
 ```
@@ -486,6 +496,14 @@ print(modify1)
 
 # Enter some text: I like to eat eggs and spam.
 # I 1ik3 70 347 3gg5 4nd 5p4m.
+```
+
+## 10. Summary and Additional Resources
+
+```
+To learn more, check out the following resources:
+- Python String Formatting Best Practices
+- Splitting, Concatenating and Joining Strings
 ```
 
 <hr/>

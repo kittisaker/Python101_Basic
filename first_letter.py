@@ -1,4 +1,5 @@
-weight = 0.2
-animal = " newt"
+user_input = input("Enter a string : ")
+letter_to_find = input("Enter a letter to find : ")
 
-print("{} kg is the weight of the{}" .format(weight, animal))
+index = user_input.find(letter_to_find)
+print(index)
