@@ -4,7 +4,7 @@
 
 ```
 In this chapter, you will learn how to:
-- Work with Python's three built-in nujber types: integer, floating-point and complex numbers
+- Work with Python's three built-in number types: integer, floating-point and complex numbers
 - Round numbers to a given number of decimal places
 - Format and display numbers in strings
 ```
@@ -54,6 +54,14 @@ inf
 
 >>> -2e400
 -inf
+```
+
+### Exercises
+
+```
+1. Write a script that creates the two variables, num1 and num2 . Both num1 and num2 should be assigned the integer literal 25,000,000, one written with underscored and one without. Print num1 and num2 on two separate lines.
+2. Write a script that assigns the floating-point literal 175000.0 to the variable num using exponential notation, and then prints num in the interactive window.
+3. In the interactive window, try and find the smallest exponent N so that 2e<N> , where <N> is replaced with a number, returns inf .
 ```
 
 ## 2. Arithmetic Operators and Expressions
@@ -140,6 +148,7 @@ ZeroDivisionError: division by zero
 ```
 
 ## 3. Challenge : Perform Calculations on User Input
+
 ```
 Write a script called exponent.py that receives two numbers from the user and
 displays the first number raised to the power of the second number.
@@ -147,6 +156,13 @@ displays the first number raised to the power of the second number.
 Enter a base: 1.2
 Enter an exponent: 3
 1.2 to the power of 3 = 1.7279999999999998
+```
+## Keep the following in mind
+```
+1. Before you can do anything with the user’s input, you will have to assign both calls to input() to new variables.
+2. The input() function returns a string, so you’ll need to convert the user’s input into numbers in order to do arithmetic.
+3. You can use an f-string to print the result.
+4. You can assume that the user will enter actual numbers as input.
 ```
 
 ## 4. Make Python Lie to You
@@ -157,6 +173,13 @@ Enter an exponent: 3
 ```
 
 ## 5. Math Functions and Number Methods
+
+```
+In this section, you'll  learn about three of the most common ones:
+1. round() , for rounding numbers to some number of decimal places
+2. abs() , for getting the absolute value of a number
+3. pow() , for raising a number to some power
+```
 
 ### The round() function
 
@@ -210,6 +233,24 @@ False
 True
 ```
 
+### Review Exercises
+```
+1. Write a script that asks the user to input a number and then displays that number rounded to two decimal places. When run, your program should look like this:
+    Enter a number: 5.432
+    Rounded number :  5.43
+2. Write a script that asks the user to input a number and then displays the absolute value of that number. When run, your program should look like this:
+    Enter a number: -10
+    Absolute value: 10
+3. Write a script that asks the user to input two numbers by using the input() function twice, then display whether or not the difference between those two number is an integer
+    Enter a number: 1.5
+    Enter another number: .5
+    The difference between 1.5 and .5 is an integer? True!
+    .
+    Enter a number: 1.5
+    Enter another number: 1.0
+    The difference between 1.5 and 1.0 is an integer? False!
+```
+
 ## 6. Print Numbers in Style
 ```
 >>> n = 7.125
@@ -246,6 +287,13 @@ print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, bal
 "Over 90.0% of Pythonistas say 'Digital Academy rocks!'"
 >>> f"Over {ratio:.2%} of Pythonistas say 'Digital Academy rocks!'" 
 "Over 90.00% of Pythonistas say 'Digital Academy rocks!'"
+```
+
+### Review Exercises
+```
+1. Print the result of the calculation 3 ** .125 as a fixed-point number with three decimal places.
+2. Print the number 150000 as currency, with the thousands grouped with commas. Currency should be displayed with two decimal places.
+3. Print the result of 2 / 10 as a percentage with no decimal places. The output should look like 20% .
 ```
 
 ## 7. Complex Numbers
