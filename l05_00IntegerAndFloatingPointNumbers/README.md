@@ -306,7 +306,7 @@ print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, bal
 >>>n.real
 1.0
 
->>> n.imag
+>>> n.imag  #imaginary
 2.0
 
 >>> n.conjugate()
@@ -357,6 +357,14 @@ TypeError: unsupported operand type(s) for //: 'complex' and 'complex'
 ```
 
 ## 8. Summary and Additional Resources
+### Additional Resources
+
+```
+To learn more, check out these resources:
+- Basic Data Types in Python
+- How to Round Numbers in Python
+```
+
 
 ### Basic Data ypes in Python
 
