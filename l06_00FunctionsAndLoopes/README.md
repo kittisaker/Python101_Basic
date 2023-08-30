@@ -1,5 +1,11 @@
 # Function and Loopes
 
+```
+In this chapter, you will learn:
+- How to create user-defined functions
+- How to write for and while loops
+- What scope is and why it is important
+```
 ## 1. What is a Function?
 ### Functions Are Values
 ```
@@ -25,7 +31,15 @@
 4
 ```
 
+```
+The process for executing a function can be summarized in 3 steps:
+1. The function is called , and any arguments are passed to the function as input.
+2. The function executes , and some action is performed with the arguments.
+3. The function returns , and the original function call is replaced with the return value.
+```
+
 ### Functions Can Have Side Effects
+
 ```
 >>> return_value = print("What do I return?")
 What do I return?
@@ -39,6 +53,12 @@ None
 ```
 
 ## 2. Write Your Own Functions
+
+```
+Every function has two parts:
+1. The function signature defines the name of the function and any inputs it expects.
+2. The function body contains the code that runs every time the function is used.
+```
 
 ### The Anatomy of a Function
 ```
@@ -108,7 +128,6 @@ print(return_value)                 # None
 ```
 >>> help(len)
 Help on built-in function len in module builtins:
-
 len(obj, /)
     Return the number of items in a container.
 ```
@@ -128,6 +147,13 @@ multiply(x, y)
     Return the product of two number x and y.
 ```
 
+### Review Exercises
+
+```
+1. Write a function called cube () with one number parameter and returns the value of that number raised to the third power. Test the function by displaying the result of calling your cube () function on a few different numbers.
+2. Write a function called greet () that takes one string parameter called name and displays the text "Hello <name>!" , where <name> is replaced with the value of the name parameter.
+```
+
 ## 3. Challenge : Convert Temperatures
 ```
 Write a script called temperature.py that defines two functions:
@@ -142,25 +168,16 @@ F = C * 9/5 + 32
 C = (F - 32) * 5/9
 ```
 
-```
-def convert_cel_to_far(C):
-    F = float(C) * 9/5 + 32
-    return F
-
-def convert_far_to_cel(F):
-    C = (float(F) - 32) * 5/9
-    return C
-
-F = input("Enter a temperature in degrees F : ")
-print("{} degree F = {:.2f} C" .format(F, convert_far_to_cel(F)))
-
-C = input("Enter a temperature in degree C : ")
-print("{} degrees C = {:.2f} F" .format(C, convert_cel_to_far(C)))
-```
-
 ## 4. Report a Block of Code
 
 ### The while Loop
+
+```
+There are two parts to every while loop:
+1. The while statement starts with the while keyword, followed by a test condition , and ends with a colon (:).
+2. The loop body contains the code that gets repeated at each step of the loop. Each line is indented four spaces.
+```
+
 ```
 num = float(input("Enter a positive number : "))
 
@@ -173,6 +190,13 @@ print("I'm not in loop while")
 ```
 
 ### The for Loop
+
+```
+Like its while counterpart, the for loop has two main parts:
+1. The for statement begins with the for keyword, followed by a membership expression , and ends in a colon (:)
+2. The loop body contains the code to be executed at each step of the loop, and is indented four spaces.
+```
+
 ```
 for letter in "Python":
     print(letter)
@@ -252,39 +276,40 @@ for n in range(1, 3):
 # n = 2 and j = 5
 ```
 
-### Challenge : Trace Your Investments
+### Review Exercises
+```
+1. Write a for loop that prints out the integers 2 through 10, each on a new line, by using the range() function.
+2. Use a while loop that prints out the integers 2 through 10 (Hint: you’ll need to create a new integer first)
+3. Write a function called doubles() that takes one number as its input and doubles that number. Then use the doubles() function in a loop to double the number 2 three times, displaying each result on a separate line. Here is some sample output:
+    4
+    8
+    16
+```
+
+## 5. Challenge : Trace Your Investments
 
 ```
-In this challenge, you will write a program called invest.py that tracks the
-growing amount of an investment over time.
-An initial deposit, called the principal amount, is made. Each year, the
-amount increases by a fixed percentage, called the annual rate of return.
-For example, a principal amount of $100 with an annual rate of return of
-5% increases the first year by $5. The second year, the increase is 5% of the
-new amount $105, which is $5.25.
-Write a function called invest with three parameters: the principal amount,
-the annual rate of return, and the number of years to calculate. The function
+In this challenge, you will write a program called invest.py that tracks the growing amount of an investment over time.
+
+An initial deposit, called the principal amount, is made. Each year, the amount increases by a fixed percentage, called the annual rate of return.
+
+For example, a principal amount of $100 with an annual rate of return of 5% increases the first year by $5. The second year, the increase is 5% of the new amount $105, which is $5.25. Write a function called invest with three parameters: the principal amount, the annual rate of return, and the number of years to calculate. The function
 signature might look something like this:
 
 def invest(amount, rate, years):
 
-The function then prints out the amount of the investment, rounded to 2
-decimal places, at the end of each year for the specified number of years.
-```
-```
-def inverst (amount, rate, years):
-    for n in range(years):
-        amount = amount + (amount * rate)
-        print("Year {} : ${:.2f}" .format((n+1), amount))
-inverst(100, .05, 4)
+The function then prints out the amount of the investment, rounded to 2 decimal places, at the end of each year for the specified number of years.
 
-# Year 1 : $105.00
-# Year 2 : $110.25
-# Year 3 : $115.76
-# Year 4 : $121.55
+For example, calling invest(100, .05, 4) should print the following:
+year 1: $105.00
+year 2: $110.25
+year 3: $115.76
+year 4: $121.55
+
+To finish the program, prompt the user to enter an initial amount, an annual percentage rate, and a number of years. Then call invest() to display the calculations for the values entered by the user.
 ```
 
-### Understand Scope in Python
+## 6. Understand Scope in Python
 ```
 x = "Hello World"
 
@@ -360,6 +385,8 @@ print(total)
 ```
 
 ## 7. Summary and Additional Resources
+
+### Additional Resources
 ```
 Python "FOR" Loops (Definite Iteration)
 Python "WHILE" Loops (Indefinite Iteration)
