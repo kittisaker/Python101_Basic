@@ -1,7 +1,17 @@
 # Conditional Logic and Control Flow
 
-## 1. Compare Values
 ```
+In this chapter, you will learn how to :
+- Compare the values of two or more variables
+- Write if statements to control the flow of your programs
+- Handle errors with try and except
+- Apply conditional logic to create simple simulations
+```
+
+## 1. Compare Values (>, <, >=, <=, !=, ==)
+
+```
+Ex
 >>> "a" == "a"
 True
 >>> "a" == "b"
@@ -10,6 +20,23 @@ False
 True
 >>> "apple" < "atari"
 True
+```
+
+### Review Exercises
+
+```
+1. For each of the following conditional expressions, guess whether they evaluate to True or False . Then type them into the interactive window to check your answers:
+    1 <= 1
+    1 <= 1
+    1 != 2
+    "good" != "bad"
+    "good" != "Good"
+
+2. For each of the following expressions, fill in the blank (indicated by ….. ) with an appropriate Boolean comparator so that the expression evaluates to True :
+    3 ….. 4
+    10 ….. 5
+    "jack" ….. "jill"
+    42 ….. "42"
 ```
 
 ## 2. Add Some Logic
@@ -76,6 +103,12 @@ False
 
 >>> (True and False) == (True and False)
 True
+```
+
+### Review Exercises
+
+```
+
 ```
 
 ## 3. Control the Flow of Your Program

@@ -1,13 +1,9 @@
-def doubles(number):
-    return number * 2
+total = 0
 
+def add_to_total(n):
+    global total
+    total = total + n
 
-number = input("Please enter a number : ")
+add_to_total(5)
 
-try:
-    num = int(number)
-    for i in range(3):
-        num = doubles(num)
-        print(num)
-except ValueError:
-    print("Invalid input, Please enter a number")
+print(total)
