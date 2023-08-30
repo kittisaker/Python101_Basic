@@ -1,6 +1,14 @@
 # Bugs Finding & Fixing Code
 
+```
+In this chapter, you will:
+- Learn how to use IDLE’s Debug Control Window
+- Practice debugging on a buggy function
+
+```
+
 ## 1. Use the Debug Control Window
+
 ### The Debug Control Window : An Overview
 
 ```
