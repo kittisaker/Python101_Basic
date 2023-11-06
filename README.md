@@ -1,492 +1,835 @@
 # Python Basic
 
-## Chapter 4 : String and String Methods
+## Chapter 5 : Numbers and Math
 
+### 1. Integer and Floating-Point Numbers
 In this chapter, you will learn how to:
-* Manipulate string with string methods
-* Work with user input
-* Deal with strings of numbers
-* Format strings for printing
+1. Work with Python's three built-in number types: integer, floating-point and complex numbers
+2. Round numbers to a given number of decimal places
+3. Format and display numbers in strings
 
-### 1. What is a String?
-* The String Data Type
-
+* Integer
 ```shell
->>> type("Hello, World")
-<class 'str'>
+>>> type(1)
+<class 'int'>
 
->>> test = "Hello World"
->>> type(test)
-<class 'str'>
+>>> int("23")
+23
+
+>>> 1234
+1234
+
+>>> 1_234
+1234
 ```
 
-* String Literals
-
+* Floating-Point Numbers
 ```shell
->>> string1 = "Hello World"
->>> string2 = "1234"
+>>> type(1.0)
+<class 'float'>
+
+>>> float("1.54")
+1.54
+
+>>> 1_000.0
+1000.0
+
+>>> 1e6
+1000000.0
+
+>>> 2e+17
+2e+17
+
+>>> 1e-4
+0.0001
+
+>>> 2e400
+inf
+
+>>> type(2e400)
+<class 'float'>
+
+>>> -2e400
+-inf
 ```
 
-* Determine the Length of a String
+* Exercises
+1. Write a script that creates the two variables, num1 and num2 . Both num1 and num2 should be assigned the integer literal 25,000,000, one written with underscored and one without. Print num1 and num2 on two separate lines.
+2. Write a script that assigns the floating-point literal 175000.0 to the variable num using exponential notation, and then prints num in the interactive window.
+3. In the interactive window, try and find the smallest exponent N so that 2e<N> , where <N> is replaced with a number, returns inf.
+
+### 2. Arithmetic Operators and Expressions
+
+* Addition
 ```shell
->>> len("abc")
+>>> 1 + 2
 3
 
->>> letters = "abc"
->>> num_letters = len(letters)
->>> num_letters
-3
+>>> 1.0 + 2
+3.0
 ```
 
-* Multiline String
-
+* Subtraction
 ```shell
->>> paragraph = "sfdsgdgdf;dkaf;kjas;jf;jak;as;fa; \
-... slfkdsgksjf;skakakjd;jfkadfnkdsnfkjsad;fkja;kfd;f\
-... urwiewujsn onfnodn ndvkjo jodjdwoi hlihdhfhsdjkojhw\
-... dfweioriwfhhguhghhfjkdfjdjhfhegkjdnemo  oefwofowf"
+>>> 1 - 1
+0
 
->>> print(paragraph)
-sfdsgdgdf;dkaf;kjas;jf;jak;as;fa; slfkdsgksjf;skakakjd;jfkadfnkdsnfkjsad;fkja;kfd;furwiewujsn onfnodn ndvkjo jodjdwoi hlihdhfhsdjkojhwdfweioriwfhhguhghhfjkdfjdjhfhegkjdnemo  oefwofowf
-```
+>>> 5.0 - 3
+2.0
 
-```shell
->>> paragraph = """skdflkdgls;f;lksf;a;lf;ld
-... slfj;sakjf;kj;aj;fkjd;kdsjf;aj;a;j;lajf;lkj
-... ;dfjkjsda;fk;aka;j;a;a;;;a;kdf;sdkf;a;jaf """
+>>> -3
+-3
 
->>> print(paragraph)
-skdflkdgls;f;lksf;a;lf;ld
-slfj;sakjf;kj;aj;fkjd;kdsjf;aj;a;j;lajf;lkj
-;dfjkjsda;fk;aka;j;a;a;;;a;kdf;sdkf;a;jaf
-```
-
-* Review Excercises
-    1. Print a string that uses double quotation marks inside the string
-    2. Print a string that uses an apostrophe inside the string
-    3. Print a string that spans multiple line with whitespace preserved
-    4. Print a string that is codded on multiple lines but displays on a single line.
-
-
-### 2. Concatenation, Indexing and Slicing
-
-In this section, you'll learn about three basic string operations:
-1. Concatenation, which joins two strings together
-2. Indexing, which gets a single character from a string
-3. Slicing, which gets several characters from a string at once
-
-* String Concatenation
-```jshell
->>> string1 = "abc"
->>> string2 = "def" 
->>> magic_string = string1 + string2
->>> magic_string
-'abcdef'
-
->>> magic_string = string1 + " " + string2  
->>> magic_string
-'abc def'
-```
-
-* String Indexing
-```jshell
->>> flavor = "apple pie" 
-
->>> flavor[1]
-'p'
-
->>> flavor[9] 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-IndexError: string index out of range
->>> flavor[-1] 
-'e'
-
->>> flavor[-10] 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-IndexError: string index out of range
-```
-
-```shell
->>> user_input = "kittisak"
->>> final_index = len(user_input) - 1
->>> final_index
-7
->>> last_character = user_input[final_index]
->>> last_character
-'k'
->>> print(user_input[-1])
-k
-```
-
-* String Slicing
-```shell
->>> test = "solo dev"
-
->>> first_three_letters = test[0] + test[1] + test[2]
->>> first_three_letters
-'sol'
-```
-
-```shell
->>> test = "solo dev"
-
->>> test[0:3]
-'sol'
-
->>> test[3:]
-'o dev'
-
->>> test[:]  
-'solo dev'
-
->>> test[:14] 
-'solo dev'
-
->>> test[12:14] 
-''
-
->>> test[-8 : -5] 
-'sol'
-```
-
-* Strings Are Immutable
-```shell
->>> word = "goal"
-
->>> word[0] = "f"
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: 'str' object does not support item assignment
-
->>> word = "f" + word[1:]
->>> word
-'foal'
-```
-
-* Review Exercises
-```
-1. Create a string and print its length using the len() function.
-2. Create two string, concatenate them, and print the result.
-3. Create two strind variables, then print one of them after the other (with a space added in between) using a comma in your print statement.
-4. Repeat exercise 3, but instead of using commas in print(), use concatenation to add a space between the two strings.
-5. Print the string "zing" by using slice notation on the string "bazinga" to specify the correct range of characters.
-```
-
-### 3. Manipulate Strings With Methods
-
-In this section, you will learn how to:
-1. Convert a string to upper or lower case
-2. Remove white space from string
-3. Determine if a string begins and ends with certain characters
-
-
-* Converting String Case
-```shell
->>> "Solo Dev".lower()
-'solo dev'
-
->>> "Solo Dev".upper() 
-'SOLO DEV
-```
-
-* Removing Whitespace From a String
-```shell
->>> " SOLO dev ".rstrip()
-' SOLO dev'
-
->>> " SOLO dev ".lstrip() 
-'SOLO dev '
-
->>> " SOLO dev ".strip()  
-'SOLO dev'
-```
-
-* Determine if a String Starts or Ends With a Particular String
-```shell
->>> "kittisak hanheam".startswith("kit")
-True
->>> "kittisak hanheam".startswith("sd;fjd") 
-False
-
->>> "kittisak hanheam".endswith("eam")      
-True
->>> "kittisak hanheam".endswith("s;jfkd") 
-False
-```
-
-* String Methods and Immutability
-```shell
->>> name = "Kope"
-
->>> name.upper()
-'KOPE'
->>> name
-'Kope'
-
->>> name = name.upper() 
->>> name
-'KOPE'
-```
-
-* Use IDLE to Discover Additional String Methods
-```shell
->>> name = "Kope"
->>> name. // scroll through with the arrow keys.
-```
-
-* Review Exercises
-```
-1. Write a script that converts the following strings to lowercase: "Animals", "Badger", "Honey Bee", "Honeybadger". Print each lowercase string on a separate line. Srting on a separate line.
-2. Repeat Exercise 1, but convert each string to uppercase instead of lowercase.
-3. Write a script that removes whitespace from the following strings. Print out the strings with the whitespace removed.
-  string1 = " Filet Mignon"
-  string2 = "Brisket "
-  string3 = " Cheeseburger "
-4. Write a script that prints out the result of .startswith("be") on each of the following strings:
-  String1 = "Becomes"
-  string2 = "becomes"
-  string3 = "BEAR"
-  string4 = " bEautiful"
-  string4 = " beautiful"
-5. Using the same four strings from Exercise 4, write a script that uses string methods to alter each string so that .startswith("be") returns True for all of them.
-```
-
-### 4. Interact With User Input
-
-```shell
->>> prompt = "Hey, what's up? " 
->>> user_input = input(prompt)
-Hey, what's up? I'm goods.
-
->>> print("You said : ", user_input)
-You said :  I'm goods.
-```
-
-```shell
->>> response = input("What should I shout? ")
-What should I shout? Noodle.
-
->>> response = response.upper()
-
->>> print("Well, if you insist...", response)
-Well, if you insist... NOODLE.
-```
-
-* Exercises
-```shell
-1. Write a script that takes input from the user and displays that input back.
-2. Write a script that takes input from the user and displays the input in lowercase.
-3. Write a script that takes input from the user and displays the number of characters inputted.
-```
-
-### 5. Challenge : Pick Adart Your User's Input
-
-```shell
-Write a script named first_letter.py that first prompts the user for input by using
-the string "Tell me your password:" The script should then determine the first letter
-of the user’s input, convert that letter to upper-case, and display it back.
-```
-
-```shell
-For example, if the user input is "no" then the program should respond like this:
-The first letter you entered was: N
-```
-
-### 6. Working With String and Numbers
-
-```shell
->>> str1 = "2"
->>> str1 + str1 
-'22'
-
->>> str1 = "2"  
->>> str1 * 3    
-'222'
->>> 3 * str1
-'222'
-
->>> str1 * "3" 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: can't multiply sequence by non-int of type 'str'
-
->>> str1 + 3  
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: can only concatenate str (not "int") to str
-```
-
-```shell
->>> num = input("Enter a number to be doubled : ")
-Enter a number to be doubled : 5
->>> doubled_num = num * 2
->>> print(doubled_num)
-55
-```
-
-```shell
->>> int("5")
-5
-
->>> float("5")
-5.0
-
->>> int("5.0")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: invalid literal for int() with base 10: '5.0'
-```
-
-```shell
->>> num = input("Enter a number to be doubled : ")
-Enter a number to be doubled : 5.0
->>> doubled_num = float(num) * 2 
->>> print(doubled_num)
-10.0
-```
-
-```shell
->>> str(print)
-'<built-in function print>'
->>> str(int)
-"<class 'int'>"
->>> str(float)
-"<class 'float'>"
-```
-
-* Exercises
-```shell
-1. Create a string containing an integer, then convert that string into an actual integer object using int() . Test that your new object is a number by multiplying it by another number and displaying the result.
-2. Repeat the previous exercise, but use a floating-point number and float() .
-3. Create a string object and an integer object, then display them side- by-side with a single print statement by using the str() function.
-4. Write a script that gets two numbers from the user using the input() function twice, multiplies the numbers together, and displays the result. If the user enters 2 and 4 , your program should
-print the following text:
-  The product of 2 and 4 is 8.0.
-```
-
-### 7. Streamline Your Print Statements
-```shell
-Suppose you have a string name = "Zaphod" and two integers heads = 2 and arms =
-3 . You want to display them in the following line: Zaphod has 2 heads and 3 arms .
-This is called string interpolation , which is just a fancy way of saying that
-you want to insert some variables into specific locations in a string.
-```
-
-```shell
-name = "Zaphod"
-heads = 2
-arms = 3
-
-print(name, "has" ,str(heads), "heads and" ,str(arms), "arms")
-
-# or
-
-print(name+ " has " +str(heads)+ " heads and " +str(arms)+ " arms")
-
-# or
-
-print(f"{name} has {heads} heads and {arms} arms")
-```
-
-```shell
->>> n = 3
->>> m = 4
->>> f"{n} times {m} is {n * m}"  
-'3 times 4 is 12'
-```
-
-```shell
-name = "Zaphod"
-heads = 2
-arms = 3
-
-print("{} has {} heads and {} arms" .format(name, heads, arms))
-```
-
-* Exercises
-```
-1. Create a float object named weight with the value 0.2, and create a string object named animal with the value " newt" . Then use these objects to print the following string using only string concatenation:
-0.2 kg is the weight of the newt.
-2. Display the same string by using the .format() method and empty {} place-holders.
-3. Display the same string using an f-string.
-```
-
-### 8. Find a String in a String
-```shell
->>> phrase = "the surprise is in here somewhere"       
->>> phrase.find("surprise")
+>>> 1- -3
 4
 
->>> phrase.find("sfdfds")   
--1
+>>> 1 - (-3)
+4
+```
+
+* Multiplication
+```shell
+>>> 3 * 3
+9
+
+>>> 2 * 8.0
+16.0
+```
+
+* Division
+```shell
+>>> 9/3
+3.0
+
+>>> int(9/3)
+3
+```
+
+* Integer Division
+```shell
+>>> 9/3
+3.0
+
+>>> 9//3
+3
+
+>>> 1/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+* Exponents
+```shell
+>>> 2 ** 2
+4
+
+>>> 2 ** -2 
+0.25
+```
+
+* The Modulus Operator
+```shell
+>>> 5 % 3
+2
+```
+
+* Arithmetic Expressions
+```shell
+*, /, //, %, +, -
+```
+
+### 3. Challenge : Perform Calculations on User Input
+```
+Write a script called exponent.py that receives two numbers from the user and
+displays the first number raised to the power of the second number.
+
+Enter a base: 1.2
+Enter an exponent: 3
+1.2 to the power of 3 = 1.7279999999999998
+```
+
+* Keep the following in mind
+1. Before you can do anything with the user’s input, you will have to assign both calls to input() to new variables.
+2. The input() function returns a string, so you’ll need to convert the user’s input into numbers in order to do arithmetic.
+3. You can use an f-string to print the result.
+4. You can assume that the user will enter actual numbers as input.
+
+
+### 4. Make Python Lie to You
+```shell
+>>> 0.1 + 0.2
+0.30000000000000004
+```
+
+### 5. Math Functions and Number Methods
+In this section, you'll  learn about three of the most common ones:
+1. round() , for rounding numbers to some number of decimal places
+2. abs() , for getting the absolute value of a number
+3. pow() , for raising a number to some power
+
+* The round() function
+```shell
+>>> round(2.3)
+2
+>>> round(2.7)
+3
+>>> round(3.7)
+4
+>>> 
 ```
 
 ```shell
->>> "solo dev".find("o")
-1
+>>> round(3.14159, 3)
+3.142
+>>> round(2.71828, 2)
+2.72
+```
+
+* The abs() Function
+```shell
+>>> abs(3)
+3
+
+>>> abs(-5.0) 
+5.0
+```
+
+* The pow() Function
+```shell
+>>> pow(2, 3)
+8
+>>> pow(2, -2)
+0.25
+
+# (x ** y) % z
+>>> pow(2, 3, 2)
+0
+```
+
+* Check if a Float Is Integral
+```shell
+>>> num = 2.5
+>>> num.is_integer()
+False
+
+>>> num = 2.0
+>>> num.is_integer()  
+True
+```
+
+* Review Exercises
+```
+1. Write a script that asks the user to input a number and then displays that number rounded to two decimal places. When run, your program should look like this:
+    Enter a number: 5.432
+    Rounded number :  5.43
+2. Write a script that asks the user to input a number and then displays the absolute value of that number. When run, your program should look like this:
+    Enter a number: -10
+    Absolute value: 10
+3. Write a script that asks the user to input two numbers by using the input() function twice, then display whether or not the difference between those two number is an integer
+    Enter a number: 1.5
+    Enter another number: .5
+    The difference between 1.5 and .5 is an integer? True!
+    .
+    Enter a number: 1.5
+    Enter another number: 1.0
+    The difference between 1.5 and 1.0 is an integer? False!
+```
+
+### 6. Print Numbers in Style
+```shell
+>>> n = 7.125
+
+>>> f"The value of n is {n:.2f} "
+'The value of n is 7.12 '
+
+>>> print("The value of n is {:.2f} " .format(n))   
+The value of n is 7.12
 ```
 
 ```shell
->>> "solo dev".find("o")
-1
+>>> n = 123456789
+
+>>> f"The value of n is {n:,} "
+'The value of n is 123,456,789 '
+
+>>> print("The value of n is {:,} " .format(n))   
+The value of n is 123,456,789
 ```
 
 ```shell
->>> test = "solo dev"
->>> test.replace("dev", "Kope")
-'solo Kope
+balance = 2000.0
+spent = 256.35
 
->>> test
-'solo dev'
-```
+balance = balance - spent
 
-* Exercises
-```
-1. In one line of code, display the result of trying to .find() the sub- string "a" in the string "AAA" . The result should be -1 .
-2. Create the variable n = 2.0 . Then use input() to get a string from the user. Finally, display the index of the first occurrence of n in the input string using .find() .
-The output should look something like this:
-  Enter a string: version 2.0
-3. Write and test a script that accepts user input using the input() function and displays the result of trying to .find() a particular letter in that input.
+print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, balance))
 ```
 
-### 9. Challenge : Turn Your User Into a L33t H4x0r
+```shell
+>>> ratio = 0.9
+>>> f"Over {ratio:.1%} of Pythonistas say 'Digital Academy rocks!'" 
+"Over 90.0% of Pythonistas say 'Digital Academy rocks!'"
+>>> f"Over {ratio:.2%} of Pythonistas say 'Digital Academy rocks!'" 
+"Over 90.00% of Pythonistas say 'Digital Academy rocks!'"
 ```
-Write a script called translate.py that asks the user for some input with
-the following prompt: Enter some text: . Then use the .replace() method to
-convert the text entered by the user into " leetspeak " by making the
-following changes to lower-case letters:
+
+* Review Exercises
+1. Print the result of the calculation 3 ** .125 as a fixed-point number with three decimal places.
+2. Print the number 150000 as currency, with the thousands grouped with commas. Currency should be displayed with two decimal places.
+3. Print the result of 2 / 10 as a percentage with no decimal places. The output should look like 20% .
+
+### 7. Complex Numbers
+```shell
+>>> n = 1 + 2j 
+>>>n
+(1+2j)
+
+>>>n.real
+1.0
+
+>>> n.imag  #imaginary
+2.0
+
+>>> n.conjugate()
+(1-2j)
+```
+
+```shell
+>>> a = 1 + 2j
+>>> b = 3 - 4j
+
+>>> a + b
+(4-2j)
+
+>>> a - b
+(-2+6j)
+
+>>> a * b
+(11+2j)
+
+>>> a ** b
+(932.1391946432212+95.9465336603415j)
+
+>>> a / b
+(-0.2+0.4j)
+
+>>> a // b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for //: 'complex' and 'complex'
+```
+
+```shell
+>>> x = 42
+>>> x.real
+42
+>>> x.imag
+0
+>>> x.conjugate()
+42
+
+>>> y = 3.14
+>>> y.real
+3.14
+>>> y.imag
+0.0
+>>> y.conjugate()
+3.14
+```
+
+### 8. Summary and Additional Resources
+
+* Additional Resources
+
+To learn more, check out these resources:
+1. Basic Data Types in Python
+2. How to Round Numbers in Python
+
+* Basic Data ypes in Python
+
+Intergers
+```shell
+# Prefix
+0b
+0B
+
+0o
+0O
+
+0x
+0X
+```
+
+```shell
+>>> 10
+10
+>>> 0x10
+16
+>>> 0b10
+2
+
+>>> type(10)
+<class 'int'>
+>>> type(0o10)
+<class 'int'>
+>>> type(0b10)
+<class 'int'>
+```
+
+Floating-Point Numbers
+```shell
+>>> 4.2
+4.2
+>>> type(4.2)
+<class 'float'>
+>>> 4.
+4.0
+>>> .2
+0.2
+>>> .4e7
+4000000.0
+>>> 4.2e-4
+0.00042
+```
+
+```shell
+# Deep Dive: Floating-Point Representation
+>>> 1.79e308
+1.79e+308
+>>> 1.8e308  
+inf
+
+>>> 5e-324
+5e-324
+>>> 1e-325
+0.0
+```
+
+Complex Numbers
+```shell
+>>> type(2+3j)
+<class 'complex'>
+```
+
+String
+```shell
+>>> print("I am a string.")
+I am a string.
+>>> print('I am too')       
+I am too
+```
+
+```shell
+>>> print('This string contains a single quote (\') character.')
+This string contains a single quote (') character.
+```
+
+```shell
+# Escape Sequence
+>>> print('a\
+... b\
+... c')
+abc
+
+>>> print('foo\\bar')
+foo\bar
+
+>>> print('foo\tbar')
+foo     bar
+```
+
+```shell
+# Escape Sequence
+>>> print("a\tb")
+a       b
+>>> print("a\141\x61")
+aaa
+
+>>> print("a\nb")
+a
+b
+
+>>> print('\u2192 \N{rightwards arrow}') 
+→ →
+```
+
+```shell
+# Raw String 
+>>> print('foo\nbar')
+foo
+bar
+
+>>> print(r'foo\nbar')
+foo\nbar
+
+>>> print(R'foo\nbar') 
+foo\nbar
+```
+
+```shell
+# Triple-Quoted Strings
+
+>>> print("""This is a 
+... string that spans
+... across several lines""")
+This is a
+string that spans
+across several lines
+```
+
+Boolean Type, Boolean Context, and “Truthiness”
+```shell
+>>> type(True)  
+<class 'bool'>
+>>> type(False) 
+<class 'bool'>
+```
+
+Built-In Functions
+```shell
+# Math
+abs()
+divmod()
+max()
+min()
+pow()
+round()
+sum()
+```
+
+```shell
+# Type Conversion
+ascii()
+bin()
+bool()
+chr()
+complex()
+float()
+hex()
+int()
+oct()
+ord()
+repr()
+str()
+type()
+```
+
+```shell
+# Iterables and Iterators
+all()
+any()
+enumerate()
+filter()
+iter()
+len()
+map()
+next()
+range()
+reversed()
+slice()
+sorted()
+zip()
+```
+
+```shell
+# Composite Data Type
+bytearray()
+bytes()
+dict()
+frozenset()
+list()
+object()
+set()
+tuple()
+```
+
+```shell
+# Classes, Atrributes, and Inheritance
+classmethod()
+delattr()
+getattr()
+hasattr()
+isinstance()
+issubclass()
+property()
+setattr()
+super()
+```
+
+```shell
+# Input / Output
+format()
+input()
+open()
+print()
+```
+
+```shell
+# Variables, References, and Scope
+dir()
+globals()
+id()
+locals()
+vars()
+```
+
+```shell
+# Miscellaneous
+callable()
+compile()
+eval()
+exec()
+hash()
+help()
+memoryview()
+staticmethod()
+__import__()
+```
+
+* How to Round Numbers in Python
+
+Python's Built-in round() Function
+```shell
+>>> round(2.5)
+2
+>>> round(1.5) 
+2
+```
+
+How much Impact Can Rounding Have?
+```python
+import random
+random.seed(100)
+
+def truncate(n):
+    return int(n * 1000) / 1000
+
+actual_value, truncated_value = 100, 100
+
+for _ in range(1_000_000):
+    delta = random.uniform(-0.05, 0.05)
+    actual_value = actual_value + delta
+    truncated_value = truncate(truncated_value + delta)
+
+print(actual_value)
+
+print(truncated_value)
+
+> python .\first_letter.py
+96.45273913513529
+0.239
 ```
 
 ```python
-# a = 4
-# b = 8
-# e = 3
-# l = 1
-# o = 0
-# s = 5
+import random
+random.seed(100)
 
-user_input = input("Enter some text: ")
-modify1 = user_input.replace("a", "4")
-modify1 = modify1.replace("b", "8")
-modify1 = modify1.replace("e", "3")
-modify1 = modify1.replace("l", "1")
-modify1 = modify1.replace("o", "0")
-modify1 = modify1.replace("s", "5")
-modify1 = modify1.replace("t", "7")
+def truncate(n):
+    return int(n * 1000) / 1000
 
-print(modify1)
+actual_value, rounded_value = 100, 100
 
-# Enter some text: I like to eat eggs and spam.
-# I 1ik3 70 347 3gg5 4nd 5p4m.
+for _ in range(1_000_000):
+    delta = random.uniform(-0.05, 0.05)
+    actual_value = actual_value + delta
+    rounded_value = round(rounded_value + delta, 3)
+
+print(actual_value)
+
+print(rounded_value)
+
+> python .\first_letter.py
+96.45273913513529
+96.258
 ```
 
-### 10. Summary and Additional Resources
+* Basic but Biased Roundind Strategies
+```python
+# Truncating
+
+def truncate(n, decimals=0):
+    multiplier = 10 ** decimals
+    return int(n * multiplier) / multiplier
+
+print(truncate(12.5))
+
+print(truncate(-5.963, 1))
+
+print(truncate(1.625, 2))
+
+print(truncate(125.6, -1))
+
+print(truncate(-1374.25, -3))
+
+# 2.0
+# -5.9
+# 1.62
+# 120.0
+# -1000.0
 ```
-To learn more, check out the following resources:
-- Python String Formatting Best Practices
-- Splitting, Concatenating and Joining Strings
+
+```python
+# Rounding Up
+import math
+
+print(math.ceil(3.7))
+print(math.ceil(2))
+print(math.ceil(-0.5))
+# 4
+# 2
+# 0
+
+import math
+
+def round_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.ceil(n * multiplier) / multiplier
+
+print(round_up(1.1))
+print(round_up(1.23, 1))
+print(round_up(1.543, 2))
+print(round_up(22.45, -1))
+print(round_up(1352, -2))
+print(round_up(-1.5))
+
+# 2.0
+# 1.3
+# 1.55
+# 30.0
+# 1400.0
+# -1.0
+```
+
+```python
+# Rounding Down
+import math
+
+print(math.floor(1.2))
+print(math.floor(-0.5))
+# 1
+# -1
+
+import math
+
+def round_down(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.floor(n * multiplier) / multiplier
+
+print(round_down(1.5))
+print(round_down(1.37, 1))
+print(round_down(-0.5))
+# 1.0
+# 1.3
+# -1.0
+```
+
+Interlude: Rounding Bias
+```python
+import statistics
+
+numbers = [1.25, -2.67, 0.43, -1.79, 8.19, -4.32]
+print(statistics.mean(numbers))
+# 0.18166666666666653
+```
+
+rounding.py
+```python
+import math
+
+def truncate(n, decimals=0):
+    multiplier = 10**decimals
+    return int(n * multiplier) / multiplier
+
+def round_up(n, decimals=0):
+    multiplier = 10**decimals
+    return math.ceil(n * multiplier) / multiplier
+
+def round_down(n, decimals=0):
+    multiplier = 10**decimals
+    return math.floor(n * multiplier) / multiplier
+```
+
+```python
+import statistics
+from rounding import truncate, round_up, round_down
+
+numbers = [1.25, -2.67, 0.43, -1.79, 8.19, -4.32]
+
+print(statistics.mean(numbers))
+
+print([truncate(n, 1) for n in numbers])
+
+print(statistics.mean([truncate(n, 1) for n in numbers]))
+
+print(statistics.mean([round_up(n, 1) for n in numbers]))
+
+print(statistics.mean([round_down(n, 1) for n in numbers]))
+
+# 0.18166666666666653
+# [1.2, -2.6, 0.4, -1.7, 8.1, -4.3]
+# 0.1833333333333333
+# 0.23333333333333325
+# 0.13333333333333316
+```
+
+Better Rounding Strategies in Python
+rounding.py : Half up
+```python
+...
+def round_half_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.floor(n * multiplier + 0.5) / multiplier
+```
+
+```python
+from rounding import round_half_up
+
+print(round_half_up(1.23, 1))
+
+print(round_half_up(1.28, 1))
+
+print(round_half_up(1.25, 1))
+
+print(round_half_up(-1.5))
+
+print(round_half_up(-1.25, 1))
+
+print(round_half_up(2.5))
+
+print(round_half_up(1.225, 2))
+
+# 1.2
+# 1.3
+# 1.3
+# -1.0
+# -1.2
+# 3.0
+# 1.23
+```
+
+```shell
+>>> -1.225 * 100
+-122.50000000000001
+>>> _ + 0.5
+-122.00000000000001
+>>> import math
+>>> math.floor(_)
+-123
+>>> _ / 100
+-1.23
+```
+
+rounding.py : Half down
+```python
+...
+def round_half_down(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.ceil(n * multiplier - 0.5) / multiplier
+```
+
+```
+https://realpython.com/python-rounding/
 ```
 
 ---
