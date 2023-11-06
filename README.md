@@ -1,17 +1,15 @@
-# Numbers and Math
+# Python Basic
 
-## 1. Integer and Floating-Point Numbers
+## Chapter 5 : Numbers and Math
 
-```
+### 1. Integer and Floating-Point Numbers
 In this chapter, you will learn how to:
-- Work with Python's three built-in number types: integer, floating-point and complex numbers
-- Round numbers to a given number of decimal places
-- Format and display numbers in strings
-```
+1. Work with Python's three built-in number types: integer, floating-point and complex numbers
+2. Round numbers to a given number of decimal places
+3. Format and display numbers in strings
 
-### Integer
-
-```
+* Integer
+```shell
 >>> type(1)
 <class 'int'>
 
@@ -25,9 +23,8 @@ In this chapter, you will learn how to:
 1234
 ```
 
-### Floating-Point Numbers
-
-```
+* Floating-Point Numbers
+```shell
 >>> type(1.0)
 <class 'float'>
 
@@ -56,18 +53,15 @@ inf
 -inf
 ```
 
-### Exercises
-
-```
+* Exercises
 1. Write a script that creates the two variables, num1 and num2 . Both num1 and num2 should be assigned the integer literal 25,000,000, one written with underscored and one without. Print num1 and num2 on two separate lines.
 2. Write a script that assigns the floating-point literal 175000.0 to the variable num using exponential notation, and then prints num in the interactive window.
-3. In the interactive window, try and find the smallest exponent N so that 2e<N> , where <N> is replaced with a number, returns inf .
-```
+3. In the interactive window, try and find the smallest exponent N so that 2e<N> , where <N> is replaced with a number, returns inf.
 
-## 2. Arithmetic Operators and Expressions
+### 2. Arithmetic Operators and Expressions
 
-### Addition
-```
+* Addition
+```shell
 >>> 1 + 2
 3
 
@@ -75,8 +69,8 @@ inf
 3.0
 ```
 
-### Subtraction
-```
+* Subtraction
+```shell
 >>> 1 - 1
 0
 
@@ -93,9 +87,8 @@ inf
 4
 ```
 
-### Multiplication
-
-```
+* Multiplication
+```shell
 >>> 3 * 3
 9
 
@@ -103,9 +96,8 @@ inf
 16.0
 ```
 
-### Division
-
-```
+* Division
+```shell
 >>> 9/3
 3.0
 
@@ -113,8 +105,8 @@ inf
 3
 ```
 
-### Integer Division
-```
+* Integer Division
+```shell
 >>> 9/3
 3.0
 
@@ -127,8 +119,8 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-### Exponents
-```
+* Exponents
+```shell
 >>> 2 ** 2
 4
 
@@ -136,19 +128,18 @@ ZeroDivisionError: division by zero
 0.25
 ```
 
-### The Modulus Operator
-```
+* The Modulus Operator
+```shell
 >>> 5 % 3
 2
 ```
 
-### Arithmetic Expressions
-```
+* Arithmetic Expressions
+```shell
 *, /, //, %, +, -
 ```
 
-## 3. Challenge : Perform Calculations on User Input
-
+### 3. Challenge : Perform Calculations on User Input
 ```
 Write a script called exponent.py that receives two numbers from the user and
 displays the first number raised to the power of the second number.
@@ -157,33 +148,28 @@ Enter a base: 1.2
 Enter an exponent: 3
 1.2 to the power of 3 = 1.7279999999999998
 ```
-## Keep the following in mind
-```
+
+* Keep the following in mind
 1. Before you can do anything with the user’s input, you will have to assign both calls to input() to new variables.
 2. The input() function returns a string, so you’ll need to convert the user’s input into numbers in order to do arithmetic.
 3. You can use an f-string to print the result.
 4. You can assume that the user will enter actual numbers as input.
-```
 
-## 4. Make Python Lie to You
 
-```
+### 4. Make Python Lie to You
+```shell
 >>> 0.1 + 0.2
 0.30000000000000004
 ```
 
-## 5. Math Functions and Number Methods
-
-```
+### 5. Math Functions and Number Methods
 In this section, you'll  learn about three of the most common ones:
 1. round() , for rounding numbers to some number of decimal places
 2. abs() , for getting the absolute value of a number
 3. pow() , for raising a number to some power
-```
 
-### The round() function
-
-```
+* The round() function
+```shell
 >>> round(2.3)
 2
 >>> round(2.7)
@@ -193,14 +179,15 @@ In this section, you'll  learn about three of the most common ones:
 >>> 
 ```
 
-```
+```shell
 >>> round(3.14159, 3)
 3.142
 >>> round(2.71828, 2)
 2.72
 ```
-### The abs() Function
-```
+
+* The abs() Function
+```shell
 >>> abs(3)
 3
 
@@ -208,10 +195,8 @@ In this section, you'll  learn about three of the most common ones:
 5.0
 ```
 
-
-### The pow() Function
-
-```
+* The pow() Function
+```shell
 >>> pow(2, 3)
 8
 >>> pow(2, -2)
@@ -222,8 +207,8 @@ In this section, you'll  learn about three of the most common ones:
 0
 ```
 
-### Check if a Float Is Integral
-```
+* Check if a Float Is Integral
+```shell
 >>> num = 2.5
 >>> num.is_integer()
 False
@@ -233,7 +218,7 @@ False
 True
 ```
 
-### Review Exercises
+* Review Exercises
 ```
 1. Write a script that asks the user to input a number and then displays that number rounded to two decimal places. When run, your program should look like this:
     Enter a number: 5.432
@@ -251,8 +236,8 @@ True
     The difference between 1.5 and 1.0 is an integer? False!
 ```
 
-## 6. Print Numbers in Style
-```
+### 6. Print Numbers in Style
+```shell
 >>> n = 7.125
 
 >>> f"The value of n is {n:.2f} "
@@ -262,7 +247,7 @@ True
 The value of n is 7.12
 ```
 
-```
+```shell
 >>> n = 123456789
 
 >>> f"The value of n is {n:,} "
@@ -272,7 +257,7 @@ The value of n is 7.12
 The value of n is 123,456,789
 ```
 
-```
+```shell
 balance = 2000.0
 spent = 256.35
 
@@ -281,7 +266,7 @@ balance = balance - spent
 print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, balance))
 ```
 
-```
+```shell
 >>> ratio = 0.9
 >>> f"Over {ratio:.1%} of Pythonistas say 'Digital Academy rocks!'" 
 "Over 90.0% of Pythonistas say 'Digital Academy rocks!'"
@@ -289,16 +274,13 @@ print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, bal
 "Over 90.00% of Pythonistas say 'Digital Academy rocks!'"
 ```
 
-### Review Exercises
-```
+* Review Exercises
 1. Print the result of the calculation 3 ** .125 as a fixed-point number with three decimal places.
 2. Print the number 150000 as currency, with the thousands grouped with commas. Currency should be displayed with two decimal places.
 3. Print the result of 2 / 10 as a percentage with no decimal places. The output should look like 20% .
-```
 
-## 7. Complex Numbers
-
-```
+### 7. Complex Numbers
+```shell
 >>> n = 1 + 2j 
 >>>n
 (1+2j)
@@ -313,7 +295,7 @@ print("After spending $ {:,.2f} , I was left with $ {:,.2f} " .format(spent, bal
 (1-2j)
 ```
 
-```
+```shell
 >>> a = 1 + 2j
 >>> b = 3 - 4j
 
@@ -338,7 +320,7 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for //: 'complex' and 'complex'
 ```
 
-```
+```shell
 >>> x = 42
 >>> x.real
 42
@@ -356,21 +338,18 @@ TypeError: unsupported operand type(s) for //: 'complex' and 'complex'
 3.14
 ```
 
-## 8. Summary and Additional Resources
-### Additional Resources
+### 8. Summary and Additional Resources
 
-```
+* Additional Resources
+
 To learn more, check out these resources:
-- Basic Data Types in Python
-- How to Round Numbers in Python
-```
+1. Basic Data Types in Python
+2. How to Round Numbers in Python
 
+* Basic Data ypes in Python
 
-### Basic Data ypes in Python
-
-#### Intergers
-
-```
+Intergers
+```shell
 # Prefix
 0b
 0B
@@ -382,7 +361,7 @@ To learn more, check out these resources:
 0X
 ```
 
-```
+```shell
 >>> 10
 10
 >>> 0x10
@@ -398,8 +377,8 @@ To learn more, check out these resources:
 <class 'int'>
 ```
 
-#### Floating-Point Numbers
-```
+Floating-Point Numbers
+```shell
 >>> 4.2
 4.2
 >>> type(4.2)
@@ -414,7 +393,7 @@ To learn more, check out these resources:
 0.00042
 ```
 
-```
+```shell
 # Deep Dive: Floating-Point Representation
 >>> 1.79e308
 1.79e+308
@@ -427,26 +406,26 @@ inf
 0.0
 ```
 
-#### Complex Numbers
-```
+Complex Numbers
+```shell
 >>> type(2+3j)
 <class 'complex'>
 ```
 
-#### String
-```
+String
+```shell
 >>> print("I am a string.")
 I am a string.
 >>> print('I am too')       
 I am too
 ```
 
-```
+```shell
 >>> print('This string contains a single quote (\') character.')
 This string contains a single quote (') character.
 ```
 
-```
+```shell
 # Escape Sequence
 >>> print('a\
 ... b\
@@ -460,7 +439,7 @@ foo\bar
 foo     bar
 ```
 
-```
+```shell
 # Escape Sequence
 >>> print("a\tb")
 a       b
@@ -475,7 +454,7 @@ b
 → →
 ```
 
-```
+```shell
 # Raw String 
 >>> print('foo\nbar')
 foo
@@ -488,7 +467,7 @@ foo\nbar
 foo\nbar
 ```
 
-```
+```shell
 # Triple-Quoted Strings
 
 >>> print("""This is a 
@@ -499,21 +478,16 @@ string that spans
 across several lines
 ```
 
-
-#### Boolean Type, Boolean Context, and “Truthiness”
-
-```
+Boolean Type, Boolean Context, and “Truthiness”
+```shell
 >>> type(True)  
 <class 'bool'>
 >>> type(False) 
 <class 'bool'>
-
 ```
 
-
-#### Built-In Functions
-
-```
+Built-In Functions
+```shell
 # Math
 abs()
 divmod()
@@ -524,7 +498,7 @@ round()
 sum()
 ```
 
-```
+```shell
 # Type Conversion
 ascii()
 bin()
@@ -541,7 +515,7 @@ str()
 type()
 ```
 
-```
+```shell
 # Iterables and Iterators
 all()
 any()
@@ -558,7 +532,7 @@ sorted()
 zip()
 ```
 
-```
+```shell
 # Composite Data Type
 bytearray()
 bytes()
@@ -570,7 +544,7 @@ set()
 tuple()
 ```
 
-```
+```shell
 # Classes, Atrributes, and Inheritance
 classmethod()
 delattr()
@@ -583,7 +557,7 @@ setattr()
 super()
 ```
 
-```
+```shell
 # Input / Output
 format()
 input()
@@ -591,7 +565,7 @@ open()
 print()
 ```
 
-```
+```shell
 # Variables, References, and Scope
 dir()
 globals()
@@ -600,7 +574,7 @@ locals()
 vars()
 ```
 
-```
+```shell
 # Miscellaneous
 callable()
 compile()
@@ -613,19 +587,18 @@ staticmethod()
 __import__()
 ```
 
+* How to Round Numbers in Python
 
-### How to Round Numbers in Python
-
-#### Python's Built-in round() Function
-```
+Python's Built-in round() Function
+```shell
 >>> round(2.5)
 2
 >>> round(1.5) 
 2
 ```
 
-#### How much Impact Can Rounding Have?
-```
+How much Impact Can Rounding Have?
+```python
 import random
 random.seed(100)
 
@@ -648,7 +621,7 @@ print(truncated_value)
 0.239
 ```
 
-```
+```python
 import random
 random.seed(100)
 
@@ -671,9 +644,8 @@ print(rounded_value)
 96.258
 ```
 
-#### Basic but Biased Roundind Strategies
-
-```
+* Basic but Biased Roundind Strategies
+```python
 # Truncating
 
 def truncate(n, decimals=0):
@@ -697,7 +669,7 @@ print(truncate(-1374.25, -3))
 # -1000.0
 ```
 
-```
+```python
 # Rounding Up
 import math
 
@@ -729,7 +701,7 @@ print(round_up(-1.5))
 # -1.0
 ```
 
-```
+```python
 # Rounding Down
 import math
 
@@ -752,9 +724,8 @@ print(round_down(-0.5))
 # -1.0
 ```
 
-#### Interlude: Rounding Bias
-
-```
+Interlude: Rounding Bias
+```python
 import statistics
 
 numbers = [1.25, -2.67, 0.43, -1.79, 8.19, -4.32]
@@ -763,7 +734,7 @@ print(statistics.mean(numbers))
 ```
 
 rounding.py
-```
+```python
 import math
 
 def truncate(n, decimals=0):
@@ -779,7 +750,7 @@ def round_down(n, decimals=0):
     return math.floor(n * multiplier) / multiplier
 ```
 
-```
+```python
 import statistics
 from rounding import truncate, round_up, round_down
 
@@ -802,19 +773,16 @@ print(statistics.mean([round_down(n, 1) for n in numbers]))
 # 0.13333333333333316
 ```
 
-#### Better Rounding Strategies in Python
-
-Rounding Half Up
-
-rounding.py
-```
+Better Rounding Strategies in Python
+rounding.py : Half up
+```python
 ...
 def round_half_up(n, decimals=0):
     multiplier = 10 ** decimals
     return math.floor(n * multiplier + 0.5) / multiplier
 ```
 
-```
+```python
 from rounding import round_half_up
 
 print(round_half_up(1.23, 1))
@@ -840,7 +808,7 @@ print(round_half_up(1.225, 2))
 # 1.23
 ```
 
-```
+```shell
 >>> -1.225 * 100
 -122.50000000000001
 >>> _ + 0.5
@@ -852,10 +820,8 @@ print(round_half_up(1.225, 2))
 -1.23
 ```
 
-Rounding Half Down
-
-rounding.py
-```
+rounding.py : Half down
+```python
 ...
 def round_half_down(n, decimals=0):
     multiplier = 10 ** decimals
@@ -865,3 +831,5 @@ def round_half_down(n, decimals=0):
 ```
 https://realpython.com/python-rounding/
 ```
+
+---
