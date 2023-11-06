@@ -76,7 +76,6 @@ In this section, you'll learn about three basic string operations:
 3. Slicing, which gets several characters from a string at once
 
 * String Concatenation
-
 ```jshell
 >>> string1 = "abc"
 >>> string2 = "def" 
@@ -120,3 +119,374 @@ IndexError: string index out of range
 >>> print(user_input[-1])
 k
 ```
+
+* String Slicing
+```shell
+>>> test = "solo dev"
+
+>>> first_three_letters = test[0] + test[1] + test[2]
+>>> first_three_letters
+'sol'
+```
+
+```shell
+>>> test = "solo dev"
+
+>>> test[0:3]
+'sol'
+
+>>> test[3:]
+'o dev'
+
+>>> test[:]  
+'solo dev'
+
+>>> test[:14] 
+'solo dev'
+
+>>> test[12:14] 
+''
+
+>>> test[-8 : -5] 
+'sol'
+```
+
+* Strings Are Immutable
+```shell
+>>> word = "goal"
+
+>>> word[0] = "f"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+
+>>> word = "f" + word[1:]
+>>> word
+'foal'
+```
+
+* Review Exercises
+```
+1. Create a string and print its length using the len() function.
+2. Create two string, concatenate them, and print the result.
+3. Create two strind variables, then print one of them after the other (with a space added in between) using a comma in your print statement.
+4. Repeat exercise 3, but instead of using commas in print(), use concatenation to add a space between the two strings.
+5. Print the string "zing" by using slice notation on the string "bazinga" to specify the correct range of characters.
+```
+
+### 3. Manipulate Strings With Methods
+
+In this section, you will learn how to:
+1. Convert a string to upper or lower case
+2. Remove white space from string
+3. Determine if a string begins and ends with certain characters
+
+
+* Converting String Case
+```shell
+>>> "Solo Dev".lower()
+'solo dev'
+
+>>> "Solo Dev".upper() 
+'SOLO DEV
+```
+
+* Removing Whitespace From a String
+```shell
+>>> " SOLO dev ".rstrip()
+' SOLO dev'
+
+>>> " SOLO dev ".lstrip() 
+'SOLO dev '
+
+>>> " SOLO dev ".strip()  
+'SOLO dev'
+```
+
+* Determine if a String Starts or Ends With a Particular String
+```shell
+>>> "kittisak hanheam".startswith("kit")
+True
+>>> "kittisak hanheam".startswith("sd;fjd") 
+False
+
+>>> "kittisak hanheam".endswith("eam")      
+True
+>>> "kittisak hanheam".endswith("s;jfkd") 
+False
+```
+
+* String Methods and Immutability
+```shell
+>>> name = "Kope"
+
+>>> name.upper()
+'KOPE'
+>>> name
+'Kope'
+
+>>> name = name.upper() 
+>>> name
+'KOPE'
+```
+
+* Use IDLE to Discover Additional String Methods
+```shell
+>>> name = "Kope"
+>>> name. // scroll through with the arrow keys.
+```
+
+* Review Exercises
+```
+1. Write a script that converts the following strings to lowercase: "Animals", "Badger", "Honey Bee", "Honeybadger". Print each lowercase string on a separate line. Srting on a separate line.
+2. Repeat Exercise 1, but convert each string to uppercase instead of lowercase.
+3. Write a script that removes whitespace from the following strings. Print out the strings with the whitespace removed.
+  string1 = " Filet Mignon"
+  string2 = "Brisket "
+  string3 = " Cheeseburger "
+4. Write a script that prints out the result of .startswith("be") on each of the following strings:
+  String1 = "Becomes"
+  string2 = "becomes"
+  string3 = "BEAR"
+  string4 = " bEautiful"
+  string4 = " beautiful"
+5. Using the same four strings from Exercise 4, write a script that uses string methods to alter each string so that .startswith("be") returns True for all of them.
+```
+
+### 4. Interact With User Input
+
+```shell
+>>> prompt = "Hey, what's up? " 
+>>> user_input = input(prompt)
+Hey, what's up? I'm goods.
+
+>>> print("You said : ", user_input)
+You said :  I'm goods.
+```
+
+```shell
+>>> response = input("What should I shout? ")
+What should I shout? Noodle.
+
+>>> response = response.upper()
+
+>>> print("Well, if you insist...", response)
+Well, if you insist... NOODLE.
+```
+
+* Exercises
+```shell
+1. Write a script that takes input from the user and displays that input back.
+2. Write a script that takes input from the user and displays the input in lowercase.
+3. Write a script that takes input from the user and displays the number of characters inputted.
+```
+
+### 5. Challenge : Pick Adart Your User's Input
+
+```shell
+Write a script named first_letter.py that first prompts the user for input by using
+the string "Tell me your password:" The script should then determine the first letter
+of the user’s input, convert that letter to upper-case, and display it back.
+```
+
+```shell
+For example, if the user input is "no" then the program should respond like this:
+The first letter you entered was: N
+```
+
+### 6. Working With String and Numbers
+
+```shell
+>>> str1 = "2"
+>>> str1 + str1 
+'22'
+
+>>> str1 = "2"  
+>>> str1 * 3    
+'222'
+>>> 3 * str1
+'222'
+
+>>> str1 * "3" 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+
+>>> str1 + 3  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+```
+
+```shell
+>>> num = input("Enter a number to be doubled : ")
+Enter a number to be doubled : 5
+>>> doubled_num = num * 2
+>>> print(doubled_num)
+55
+```
+
+```shell
+>>> int("5")
+5
+
+>>> float("5")
+5.0
+
+>>> int("5.0")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '5.0'
+```
+
+```shell
+>>> num = input("Enter a number to be doubled : ")
+Enter a number to be doubled : 5.0
+>>> doubled_num = float(num) * 2 
+>>> print(doubled_num)
+10.0
+```
+
+```shell
+>>> str(print)
+'<built-in function print>'
+>>> str(int)
+"<class 'int'>"
+>>> str(float)
+"<class 'float'>"
+```
+
+* Exercises
+```shell
+1. Create a string containing an integer, then convert that string into an actual integer object using int() . Test that your new object is a number by multiplying it by another number and displaying the result.
+2. Repeat the previous exercise, but use a floating-point number and float() .
+3. Create a string object and an integer object, then display them side- by-side with a single print statement by using the str() function.
+4. Write a script that gets two numbers from the user using the input() function twice, multiplies the numbers together, and displays the result. If the user enters 2 and 4 , your program should
+print the following text:
+  The product of 2 and 4 is 8.0.
+```
+
+### 7. Streamline Your Print Statements
+```shell
+Suppose you have a string name = "Zaphod" and two integers heads = 2 and arms =
+3 . You want to display them in the following line: Zaphod has 2 heads and 3 arms .
+This is called string interpolation , which is just a fancy way of saying that
+you want to insert some variables into specific locations in a string.
+```
+
+```shell
+name = "Zaphod"
+heads = 2
+arms = 3
+
+print(name, "has" ,str(heads), "heads and" ,str(arms), "arms")
+
+# or
+
+print(name+ " has " +str(heads)+ " heads and " +str(arms)+ " arms")
+
+# or
+
+print(f"{name} has {heads} heads and {arms} arms")
+```
+
+```shell
+>>> n = 3
+>>> m = 4
+>>> f"{n} times {m} is {n * m}"  
+'3 times 4 is 12'
+```
+
+```shell
+name = "Zaphod"
+heads = 2
+arms = 3
+
+print("{} has {} heads and {} arms" .format(name, heads, arms))
+```
+
+* Exercises
+```
+1. Create a float object named weight with the value 0.2, and create a string object named animal with the value " newt" . Then use these objects to print the following string using only string concatenation:
+0.2 kg is the weight of the newt.
+2. Display the same string by using the .format() method and empty {} place-holders.
+3. Display the same string using an f-string.
+```
+
+### 8. Find a String in a String
+```shell
+>>> phrase = "the surprise is in here somewhere"       
+>>> phrase.find("surprise")
+4
+
+>>> phrase.find("sfdfds")   
+-1
+```
+
+```shell
+>>> "solo dev".find("o")
+1
+```
+
+```shell
+>>> "solo dev".find("o")
+1
+```
+
+```shell
+>>> test = "solo dev"
+>>> test.replace("dev", "Kope")
+'solo Kope
+
+>>> test
+'solo dev'
+```
+
+* Exercises
+```
+1. In one line of code, display the result of trying to .find() the sub- string "a" in the string "AAA" . The result should be -1 .
+2. Create the variable n = 2.0 . Then use input() to get a string from the user. Finally, display the index of the first occurrence of n in the input string using .find() .
+The output should look something like this:
+  Enter a string: version 2.0
+3. Write and test a script that accepts user input using the input() function and displays the result of trying to .find() a particular letter in that input.
+```
+
+### 9. Challenge : Turn Your User Into a L33t H4x0r
+```
+Write a script called translate.py that asks the user for some input with
+the following prompt: Enter some text: . Then use the .replace() method to
+convert the text entered by the user into " leetspeak " by making the
+following changes to lower-case letters:
+```
+
+```python
+# a = 4
+# b = 8
+# e = 3
+# l = 1
+# o = 0
+# s = 5
+
+user_input = input("Enter some text: ")
+modify1 = user_input.replace("a", "4")
+modify1 = modify1.replace("b", "8")
+modify1 = modify1.replace("e", "3")
+modify1 = modify1.replace("l", "1")
+modify1 = modify1.replace("o", "0")
+modify1 = modify1.replace("s", "5")
+modify1 = modify1.replace("t", "7")
+
+print(modify1)
+
+# Enter some text: I like to eat eggs and spam.
+# I 1ik3 70 347 3gg5 4nd 5p4m.
+```
+
+### 10. Summary and Additional Resources
+```
+To learn more, check out the following resources:
+- Python String Formatting Best Practices
+- Splitting, Concatenating and Joining Strings
+```
+
+---
